@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Test Camera avec capacitor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="getPicutre()">Ouvrir la galerie pour selectionner une photo</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="image">
+    <ion-col>
+      <ion-img [src]="image.webPath"></ion-img>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="permissionPicutre()">Vérifier les permission android</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+ </ion-grid>
+</ion-content>
