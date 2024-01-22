@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ajout d'une ressource intéressante
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-button (click)="buttonResetStorage_DEV()" expand="" fill="outline" color="danger">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      Clear Storage (DEV)
+    </ion-button>
+    <img alt="Silhouette of mountains" src="/assets/img_fav.jpg"/>
+
+    <ion-card-header>
+      <ion-card-title>Ajout d'une ressource</ion-card-title>
+      <ion-card-subtitle>Lien, que j'aimerais lire plus tard...</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-datetime (ionChange)="viewDateConsole($event)" presentation="date" ></ion-datetime>
+      <ion-input [(ngModel)]="title" label="Titre" labelPlacement="floating" placeholder="titre de la ressource"></ion-input>
+      <ion-input [(ngModel)]="url" label="&nbsp;&nbsp;Url" label-placement="floating" fill="outline" placeholder="lien/url de la ressource"></ion-input>
+    </ion-card-content>
+
+    <ion-button (click)="addRessource()" expand="block" fill="outline" color="success">
+      <ion-icon slot="start" name="star"></ion-icon>
+      Ajouter
+    </ion-button>
+
+    <ion-toast
+      position="top"
+      positionAnchor="header"
+      [isOpen]="isAddResOk"
+      message="Votre ressource a bien été enregistrée"
+      [duration]="duration"
+      (didDismiss)="setOpen()"
+      layout="stacked"
+      icon="globe"
+    ></ion-toast>
+
+
+  </ion-card>
+
+</ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActionSheetButton, ActionSheetController } from '@ionic/angular';
+import { RessourceLinkService } from '../shared/services/ressource-link.service';
 
 @Component({
   selector: 'app-listeLiens',
@@ -8,53 +8,25 @@ import { ActionSheetButton, ActionSheetController } from '@ionic/angular';
 })
 export class ListeLiensComponent {
 
-  constructor(private actionSheetCtrl: ActionSheetController) {}
+  allRessource : any[] = []
   
-
-  public actionSheetButtons : ActionSheetButton[] = [
-    {
-      text: 'Delete',
-      role: 'destructive',
-      data: {
-        action: 'delete',
-      },
-      handler : () => {
-        console.log("Click sur le bouton Delete")
-      }
-    },
-    {
-      text: 'Share',
-      data: {
-        action: 'share',
-      },
-      handler : () => {
-        console.log("Click sur le bouton Share")
-      }
-    },
-    {
-      text: 'Cancel',
-      role: 'cancel',
-      data: {
-        action: 'cancel',
-      },
-      handler : () => {
-        console.log("Click sur le bouton Cancel")
-      }
-    },
-  ];
-
-
-  async presentActionSheet() {
-    const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Actions',
-      buttons: this.actionSheetButtons,
-    });
-
-    await actionSheet.present();
-    await actionSheet.onDidDismiss().then(() => {
-      console.log("fermé")
+  constructor(private ressourceServe : RessourceLinkService) {
+    this.ressourceServe.init().then(() => {
+      this.ressourceServe.get("ressources").then((ressources : any[]) => {
+        this.allRessource = ressources.reverse()
+      })
     })
   }
 
+
+  handleRefresh(event : any){
+    setTimeout(() => {
+      this.ressourceServe.get("ressources").then((ressources : any[]) => {
+        this.allRessource = ressources.reverse()
+        event.target.complete();
+      })
+    }, 1500)
+  }
+  
 
 }

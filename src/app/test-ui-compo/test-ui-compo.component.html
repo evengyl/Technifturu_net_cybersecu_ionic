@@ -1,0 +1,311 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+
+  <!-- <ion-item>
+    <ion-label>Basic Item</ion-label>
+  </ion-item>
+   -->
+ 
+  <!-- <ion-item>
+    <ion-label class="ion-text-nowrap">
+      Multi-line text that should ellipsis when it is too long to fit on one line. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit.
+    </ion-label>
+  </ion-item> -->
+  
+  <ion-item>
+    <ion-label>
+      <h1>H1 Heading</h1>
+      <p>
+        Phasellus sit amet iaculis odio, eget feugiat erat. Etiam sit amet turpis sit amet massa viverra maximus. Aenean
+        venenatis porttitor pharetra. Fusce vulputate urna purus, vel efficitur mauris auctor non. Etiam libero odio,
+        sodales in velit a, faucibus venenatis erat. Ut convallis sit amet urna in ultrices. Cras neque est, vehicula sed
+        lorem ac, placerat commodo elit. Praesent turpis metus, elementum eget iaculis ac, elementum in odio. Nunc et elit
+        faucibus, condimentum mauris consequat, ornare dolor. Sed ac lectus a est blandit tempor. Etiam lobortis tristique
+        maximus.
+      </p>
+    </ion-label>
+  </ion-item>
+  
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            <p>
+              Phasellus sit amet iaculis odio, eget feugiat erat. Etiam sit amet turpis sit amet massa viverra maximus. Aenean
+              venenatis porttitor pharetra. Fusce vulputate urna purus, vel efficitur mauris auctor non. Etiam libero odio,
+              sodales in velit a, faucibus venenatis erat. Ut convallis sit amet urna in ultrices. Cras neque est, vehicula sed
+              lorem ac, placerat commodo elit. Praesent turpis metus, elementum eget iaculis ac, elementum in odio. Nunc et elit
+              faucibus, condimentum mauris consequat, ornare dolor. Sed ac lectus a est blandit tempor. Etiam lobortis tristique
+              maximus.
+            </p>
+          </ion-label>
+        </ion-item>
+        
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            <p>
+              Phasellus sit amet iaculis odio, eget feugiat erat. Etiam sit amet turpis sit amet massa viverra maximus. Aenean
+              venenatis porttitor pharetra. Fusce vulputate urna purus, vel efficitur mauris auctor non. Etiam libero odio,
+              sodales in velit a, faucibus venenatis erat. Ut convallis sit amet urna in ultrices. Cras neque est, vehicula sed
+              lorem ac, placerat commodo elit. Praesent turpis metus, elementum eget iaculis ac, elementum in odio. Nunc et elit
+              faucibus, condimentum mauris consequat, ornare dolor. Sed ac lectus a est blandit tempor. Etiam lobortis tristique
+              maximus.
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <p>
+              Phasellus sit amet iaculis odio, eget feugiat erat. Etiam sit amet turpis sit amet massa viverra maximus. Aenean
+              venenatis porttitor pharetra. Fusce vulputate urna purus, vel efficitur mauris auctor non. Etiam libero odio,
+              sodales in velit a, faucibus venenatis erat. Ut convallis sit amet urna in ultrices. Cras neque est, vehicula sed
+              lorem ac, placerat commodo elit. Praesent turpis metus, elementum eget iaculis ac, elementum in odio. Nunc et elit
+              faucibus, condimentum mauris consequat, ornare dolor. Sed ac lectus a est blandit tempor. Etiam lobortis tristique
+              maximus.
+            </p>
+          </ion-card-content>
+
+          <ion-button (ionBlur)="testEvent($event)" (ionFocus)="testEvent($event)" expand="block" fill="outline" color="success">
+            <ion-icon slot="start" name="star"></ion-icon>
+            Ajouter
+          </ion-button>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-icon aria-hidden="true" name="airplane" slot="start"></ion-icon>
+            <ion-label>Airplane Mode</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon aria-hidden="true" name="wifi" slot="start"></ion-icon>
+            <ion-label>Wi-Fi</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon aria-hidden="true" name="bluetooth" slot="start"></ion-icon>
+            <ion-label>Bluetooth</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon aria-hidden="true" name="call" slot="start"></ion-icon>
+            <ion-label>Cellular</ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-note color="medium" class="ion-margin-horizontal">
+          Your comments will be kept anonymous and will only be used to improve the reliability of our products.
+        </ion-note>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item-sliding>
+            <ion-item>
+              <ion-label>Sliding Item with End Options</ion-label>
+            </ion-item>
+        
+            <ion-item-options>
+              <ion-item-option>Favorite</ion-item-option>
+              <ion-item-option color="danger">Delete</ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        
+          <ion-item-sliding>
+            <ion-item-options side="start">
+              <ion-item-option color="success">Archive</ion-item-option>
+            </ion-item-options>
+        
+            <ion-item>
+              <ion-label>Sliding Item with Start Options</ion-label>
+            </ion-item>
+          </ion-item-sliding>
+        
+          <ion-item-sliding>
+            <ion-item-options side="start">
+              <ion-item-option color="success">Archive</ion-item-option>
+            </ion-item-options>
+        
+            <ion-item>
+              <ion-label>Sliding Item with Options on Both Sides</ion-label>
+            </ion-item>
+        
+            <ion-item-options side="end">
+              <ion-item-option>Favorite</ion-item-option>
+              <ion-item-option color="danger">Delete</ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="presentActionSheet()">Open action sheet</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button id="present-alert">Click Me for alert</ion-button>
+        <ion-alert
+          trigger="present-alert"
+          header="A Short Title Is Best"
+          subHeader="A Sub Header Is Optional"
+          message="A message should be a short, complete sentence."
+          [buttons]="alertButtons"
+        ></ion-alert>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button id="open-modal" expand="">Open Modal</ion-button>
+        <p>{{ message }}</p>
+        <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button (click)="cancel()">Cancel</ion-button>
+                </ion-buttons>
+                <ion-title>Welcome</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <ion-item>
+                <ion-input
+                  label="Enter your name"
+                  labelPlacement="stacked"
+                  type="text"
+                  placeholder="Your name"
+                  [(ngModel)]="message"
+                ></ion-input>
+              </ion-item>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-searchbar></ion-searchbar>
+        <ion-searchbar placeholder="Custom Placeholder"></ion-searchbar>
+        <ion-searchbar disabled="true" placeholder="Disabled"></ion-searchbar>
+        <ion-searchbar value="Pré-Valued"></ion-searchbar>
+        <hr>
+        <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+        <ion-list>
+          <ion-item *ngFor="let result of results">
+            <ion-label>{{ result }}</ion-label>
+          </ion-item>
+        </ion-list>
+        <hr><hr><hr><hr>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-segment (ionChange)="switchContent($event)" value="c1">
+          <ion-segment-button value="c1">
+            <ion-label>Content 1</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="c2">
+            <ion-label>Content 2</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        {{ contentSegment }}
+      </ion-col>
+    </ion-row>
+
+
+
+    <ion-row>
+      <ion-col>
+        <ion-segment [scrollable]="true" value="heart">
+          <ion-segment-button value="home">
+            <ion-icon name="home"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="heart">
+            <ion-icon name="heart"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="pin">
+            <ion-icon name="pin"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="star">
+            <ion-icon name="star"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="call">
+            <ion-icon name="call"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="globe">
+            <ion-icon name="globe"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="basket">
+            <ion-icon name="basket"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="barbell">
+            <ion-icon name="barbell"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="trash">
+            <ion-icon name="trash"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="person">
+            <ion-icon name="person"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+  
+</ion-content>
+
+
+
